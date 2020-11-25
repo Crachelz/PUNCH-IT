@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVGReloaded</title>
+</head>
+<body>
+    <script>
+
+//2. [AVGReloaded] Elaborar una función que reciba tres enteros y retorne el promedio.
+const numbers3 = [];
+const AVGRel = (num) => {
+    for (let i = 0; i < num; i++) {
+    numbers3.push(parseInt(prompt(`Ingrese un numero`))); 
+    }
+    const result = numbers3.reduce((a , b) => (a + b))
+    document.write(`El promedio de los 3 numeros ingresados es ${parseFloat(result / 3).toFixed(2)}`)
+}
+AVGRel(3)
+console.log(numbers3);
+    </script>
+</body>
+</html>

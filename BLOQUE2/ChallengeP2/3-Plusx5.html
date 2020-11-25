@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plusx5</title>
+</head>
+<body>
+<script>
+//3. [Plusx5] Confeccionar una función que solicite la carga de 5 valores por teclado y retorne su suma.
+
+const numbers5 =[];
+const plusx5 = (num) => {
+    for (let i = 0; i < num; i++) {
+    numbers5.push(parseInt(prompt(`Ingrese un numero`))); 
+    }
+    const result = numbers5.reduce((a , b) => (a + b))
+    document.write(`La sumande los 5 numeros ingresados es ${parseFloat(result).toFixed(2)}`)
+}
+plusx5(5)
+console.log(numbers5);
+</script>
+</body>
+</html>

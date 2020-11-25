@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize</title>
+</head>
+<body>
+    <script>
+//9. [Capitalize] Crear una función que convierta un string “hola mundo” y retorne “Hola Mundo”
+
+let texto = prompt(`Ingrese un texto`);
+
+//selecciona primer letra de string (charAt()) y retorna el resto de la string como está (slice()).
+function capitalize(texto) {
+    return firstLetter = texto.charAt(0).toUpperCase() + texto.slice(1)
+}
+// convierto el texto en un array de substrings(split), para luego a cada string aplicarle la funcion capitalize. 
+//finalmente, vuelvo a convertir todo en una sola string (join())
+const holaMundo = texto.split(' ').map(capitalize).join(' ');
+document.write(holaMundo);
+
+    </script>
+</body>
+</html>

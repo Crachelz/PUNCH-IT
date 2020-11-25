@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToArray</title>
+</head>
+<body>
+    <script>
+//10. [toArray] Crear una función que reciba un string y lo convierta en un array de caracteres.
+
+//Se pide ingreso del texto
+const texto = prompt(`Ingrese un texto`);
+
+//el texto ingresado es convertido a una string (split())
+function getArray(params) {
+const arraySplit = texto.split(' ');
+console.log(arraySplit);     
+}
+
+getArray(texto)
+    </script>
+</body>
+</html>

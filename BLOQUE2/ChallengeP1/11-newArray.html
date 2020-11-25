@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 11.	[newArray]
+Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000. Luego extraer los dos últimos elementos sumarlos y mostrarlos. Imprimir también el tamaño final del vector
+Recordar que const nro=1+(Math.random()*1000); permite generar un número 
+aleatorio.   */
+
+
+const randomN = (num) => {
+const valoresRandom = [];
+for (let i = 0; i < num; i++) {
+    const nro = Math.floor(Math.random()*1000) + 1;
+    valoresRandom.push(nro);
+    }
+
+const last2 = valoresRandom.pop() + valoresRandom.pop();
+document.write(last2);
+document.write(valoresRandom);
+}
+randomN(5);
+    </script>
+</body>
+</html>

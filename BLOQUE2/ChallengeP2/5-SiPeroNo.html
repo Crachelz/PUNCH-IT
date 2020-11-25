@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiPeroNo</title>
+</head>
+<body>
+    <script>
+/* 5. [SiPeroNo] Crear una función que reciba dos arrays de números y retorne un nuevo
+array con los elementos que se encuentren en el primer array, pero no en el
+segundo
+Nota; Esto se llama "resta" entre conjuntos
+Ejemplo:
+[5,1,2,3,4] y [3,4] debería devolver [5,1,2] */
+
+const primerArray = [5,1,2,3,4,6,9];
+const segundoArray = [3,4,5];
+
+function siPeroNo(primerArray, segundoArray) {
+    result= primerArray.filter(num => !segundoArray.includes(num));
+    return result
+}
+
+const resta = siPeroNo(primerArray, segundoArray)
+document.write(resta);
+
+    </script>
+</body>
+</html>

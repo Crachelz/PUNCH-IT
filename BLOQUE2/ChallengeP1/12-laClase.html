@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Clase</title>
+</head>
+<body>
+    <script>
+        /* 12.	[LaClase]
+Confeccionar un script que permita a un usuario ingresar nombre de alumno y notas en distintos vectores (condición de finalización → alumno = “”). Al finalizar la carga se pide:
+a.	 Cantidad de alumnos cargados   ok
+b.	Cantidad de alumnos aprobados (nota >=6)    ok
+c.	Cantidad de alumnos promocionados (+7)  ok
+d.	Alumno/s con mayor nota (si son muchos mostrarlos todos)  ok
+e.	Alumno/s con menor nota     ok
+f.	Media de aprobados (Promedio de todos los alumnos aprobados) ok 
+g.	Media de desaprobados (Promedio de todos los alumnos desaprobados) ok
+h.	Ordenar y mostrar los nombres de los alumnos por orden alfabético   ok
+i.	Cantidad de notas pares y cantidad de notas impares.  ok*/ 
+
+const cantidadAlumnos = parseInt(prompt(`Indique cantidad de alumnos a ingresar`));
+let alumnos = [];
+let notas = [];
+let mayorNota = 0;
+let menorNota = 0;
+const maxNotas = [];
+const minNotas = [];
+const aprobados = []
+const desaprobados = [];
+let promocionados = 0;
+const par = [];
+const impar = [];
+
+for (let i = 0; i < cantidadAlumnos; i++) {
+    if (alumnos.push(prompt('Ingrese el nombre del alumno'))) {
+        notas.push(parseFloat(prompt('Ingrese nota correspondiente')));
+    }
+} 
+for (let i = 0; i < notas.length; i++) {
+    notas[i] >= 6 && notas[i] <= 10 ? aprobados.push(notas[i]) : desaprobados.push(notas[i]);
+    notas[i] >= 7 ? promocionados++ : "";
+        mayorNota = Math.max(...notas);
+        menorNota = Math.min(...notas);
+            if (notas[i] === mayorNota){
+                notas[i] == alumnos[i];
+                maxNotas.push(alumnos[i])
+            }
+            if (notas[i] === menorNota) {
+                notas[i] == alumnos[i];
+                minNotas.push(alumnos[i])
+            } 
+            if (notas[i] % 2 === 0) {
+                par.push(notas[i])
+                } else {
+                impar.push(notas[i])
+                }
+            }
+
+const MediaAprobados = aprobados.reduce((a, b) => (a + b)) / aprobados.length;
+const MediaDesaprobados = desaprobados.reduce((a, b) => (a + b)) / desaprobados.length;
+
+    document.write(`La cantidad de alumnos ingresados es: ${alumnos.length}. <br>`); 
+    document.write(`La cantidad de alumnos aprobados es: ${aprobados.length}. <br>`);
+    document.write(`La cantidad de alumnos promocionados es: ${promocionados}. <br>`);
+    document.write(`Los alumnos con nota maxima son: ${maxNotas}. <br>`);
+    document.write(`Los alumnos con nota minima son: ${minNotas}. <br>`);
+    document.write(`El promedio de aprobados es: ${parseFloat(MediaAprobados).toFixed(2)}. <br>`);
+    document.write(`El promedio de desaprobados es: ${parseFloat(MediaDesaprobados).toFixed(2)}. <br>`);
+    document.write(`Los nombres de alumnos son: ${alumnos.sort()}. <br>`);
+    document.write(`La cantidad de notas par son: ${par.length}. <br>`);
+    document.write(`La cantidad de notas impar son: ${impar.length}. <br>`);
+
+        console.log(notas);
+
+    </script>
+</body>
+</html>

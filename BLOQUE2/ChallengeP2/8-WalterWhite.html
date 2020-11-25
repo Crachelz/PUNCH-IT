@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WlaterWhite</title>
+</head>
+<body>
+    <script>
+//8. [WalterWhite] Crear una función que retorne la cantidad de espacios en blanco de un texto
+
+const texto = prompt(`Ingrese un texto`);
+const getBlank = (text) => {
+count= 0;
+for (element of texto) {
+    if (element === " "){
+        count++
+    }
+}
+document.write(`La cantidad de espacios en blanco del texto ingresado es ${count}`)
+}
+getBlank(texto);
+
+    </script>
+</body>
+</html>

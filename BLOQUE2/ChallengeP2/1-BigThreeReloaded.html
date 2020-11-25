@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Three Reloadad</title>
+</head>
+<body>
+    <script>
+/* 1. [BigThreeReloaded] Confeccionar una función a la cual le envíe tres enteros y
+retorne el mayor de ellos. */
+
+const numbers = [];
+const bigthree = (num) => {
+    for (let i = 0; i < num; i++) {
+    numbers.push(prompt(`Ingrese un numero`)); 
+    }
+/*         if (numbers[0] > numbers[1]  && numbers[0] > numbers[2] ) {
+        document.write(`El número mayor es ${numbers[0]}`);
+            } else if (numbers[1]> numbers[0] && numbers[1] > numbers[2]){
+                document.write(`El número mayor es ${numbers[1]}`);
+                    } else  if (numbers[2]> numbers[0] && numbers[2] > numbers[1]){
+                        document.write(`El número mayor es ${numbers[2]}`);
+                            } else {
+                                null;
+                                }  */  
+    const biggestN = document.write(`El número mayor es ${Math.max(...numbers)}`)                        
+                                    }
+bigthree(3);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+7.	[Movie]
+Se ingresan por teclado 4 números, si todos los valores ingresados son menores a 23, imprimir en la página ‘Todos los números son menores al número establecido. */
+
+const numPedidos = []
+for (let i = 0; i < 4 ; i++) {
+        const pedirNum = parseInt(prompt(`Ingrese un numero`));
+        numPedidos.push(pedirNum);
+        }
+if (numPedidos[0] < 23 && numPedidos[1] < 23 && numPedidos[2] < 23 && numPedidos[3] < 23 ){
+    console.log(`Todos los números ingresados son menores al numero establecido.`);
+}
+
+    </script>
+</body>
+</html>
