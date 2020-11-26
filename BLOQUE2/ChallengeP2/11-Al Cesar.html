@@ -12,16 +12,23 @@
 //const texto = prompt(`Ingrese texto a codificar`);
 //const textToScript = texto.split("");
 
+const text = prompt('Ingrese el texto a codificar').toUpperCase()
 
-
-
-const alphabet = "abcdefghijklmnopqrstuvwxyz";
-let alphabetSplit = alphabet.split("");
-
-function indexAlph(element, index) {
-    console.log(element + " = " + index);
+function cesar(){
+  let result = "";
+for (let i = 0; i < text.length; i++) {
+  var ascii = text[i].charCodeAt();
+  if(ascii >= 65 && ascii <= 85) {
+    result += String.fromCharCode(ascii + 5)
+  } else if (ascii >= 85 && ascii <= 90) {
+    result += String.fromCharCode(ascii - 5)
+  } else {
+    result += " ";
+  }
 }
-alphabetSplit.forEach(indexAlph);
+    console.log(result);
+}
+cesar(text);
 
     </script>
 </body>
